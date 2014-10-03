@@ -1,5 +1,6 @@
 'use strict'
 
+angular.module('ccApp.models', [])
 angular.module('ccApp.services', [])
 angular.module('ccApp.controllers', [])
 
@@ -10,6 +11,8 @@ angular.module('ccApp', [
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'underscore',
+    'ccApp.models',
     'ccApp.services',
     'ccApp.controllers'
   ])
