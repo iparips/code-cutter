@@ -3,7 +3,7 @@ User / Reviewer Experience|Is there a runner script?|yes - no|
 User / Reviewer Experience|Is there a read me and does it explain how to run the app?|yes - no|
 User / Reviewer Experience|Is there a catch all errors clause handling unexpected errors?|yes - no|
 User / Reviewer Experience|Do invalid inputs result in helpful error messages?|stacktrace - unhelpful message - helpful message|
-User / Reviewer Experience|On scale from redundant to helpful, how are the comments?|redundant (state what the code does) - helpful (explain reasons behind design decisions)|
+User / Reviewer Experience|On scale from redundant to helpful, how are the comments?|redundant - helpful|redundant - state what the code does; helpful - explain reasons behind design decisions
 OOD|Does the code follow Single Responsibility Principle?|rarely - occasionally - most times|
 OOD|Are classes & methods small?| yes - no |
 OOD|Are variable / method names descriptive?| rarely - occasionally - most times|
