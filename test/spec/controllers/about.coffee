@@ -3,7 +3,7 @@
 describe 'Controller: AboutCtrl', ->
 
   # load the controller's module
-  beforeEach module 'codeCutterApp'
+  beforeEach module 'ccApp'
 
   AboutCtrl = {}
   scope = {}

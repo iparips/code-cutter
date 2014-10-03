@@ -1,14 +1,9 @@
 'use strict'
 
-###*
- # @ngdoc function
- # @name codeCutterApp.controller:MainCtrl
- # @description
- # # MainCtrl
- # Controller of the codeCutterApp
-###
-angular.module('codeCutterApp')
-  .controller 'MainCtrl', ($scope) ->
+angular.module('ccApp.controllers')
+
+  .controller 'MainCtrl', ($scope, questions) ->
+
     $scope.awesomeThings = [
       'HTML5 Boilerplate'
       'AngularJS'

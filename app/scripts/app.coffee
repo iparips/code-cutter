@@ -1,30 +1,22 @@
 'use strict'
 
-###*
- # @ngdoc overview
- # @name codeCutterApp
- # @description
- # # codeCutterApp
- #
- # Main module of the application.
-###
-angular
-  .module('codeCutterApp', [
+angular.module('ccApp.controllers', [])
+
+angular.module('ccApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ccApp.controllers'
   ])
-  .config ($routeProvider) ->
+
+angular.module('ccApp').config ($routeProvider) ->
     $routeProvider
       .when '/',
         templateUrl: 'views/main.html'
         controller: 'MainCtrl'
-      .when '/about',
-        templateUrl: 'views/about.html'
-        controller: 'AboutCtrl'
       .otherwise
         redirectTo: '/'
 
