@@ -1,5 +1,6 @@
 'use strict'
 
+angular.module('ccApp.services', [])
 angular.module('ccApp.controllers', [])
 
 angular.module('ccApp', [
@@ -9,14 +10,15 @@ angular.module('ccApp', [
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'ccApp.services',
     'ccApp.controllers'
   ])
 
 angular.module('ccApp').config ($routeProvider) ->
-    $routeProvider
-      .when '/',
-        templateUrl: 'views/main.html'
-        controller: 'MainCtrl'
-      .otherwise
-        redirectTo: '/'
+  $routeProvider
+    .when '/',
+      templateUrl: 'views/main.html'
+      controller: 'MainCtrl'
+    .otherwise
+      redirectTo: '/'
 
