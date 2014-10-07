@@ -1,3 +1,5 @@
+require 'ostruct'
+
 module CodeCutter
 
   class Question < OpenStruct
@@ -8,7 +10,7 @@ module CodeCutter
         args = {
             tags: parse_tags(record.fetch('Area')),
             body: record.fetch('Question'),
-            answer_options: parse_answer_options(record.fetch('Answer Options')),
+            answerOptions: parse_answer_options(record.fetch('Answer Options / Score')),
             notes: parse_notes(record.fetch('Notes'))
         }
 
@@ -22,7 +24,15 @@ module CodeCutter
       end
 
       def parse_answer_options(string)
-        string.split('-').map(&:strip)
+        options = string.split('-').map(&:strip)
+
+        result = {}
+        options.map do |o|
+          option_and_score = o.split(':')
+          result[option_and_score.first] = Float(option_and_score.last)
+        end
+
+        result
       end
 
       def parse_notes(string)

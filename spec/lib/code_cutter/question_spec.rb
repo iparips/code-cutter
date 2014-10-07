@@ -9,7 +9,7 @@ module CodeCutter
       {
           'Area' => 'category 1, category 2',
           'Question' => 'question',
-          'Answer Options' => 'yes - no',
+          'Answer Options / Score' => 'no:0 - yes:1',
           'Notes' => 'clarification'
       }
     }
@@ -40,12 +40,12 @@ module CodeCutter
 
       describe 'response options' do
 
-        it 'includes yes' do
-          expect(subject.answer_options).to include 'yes'
+        it 'includes yes with a score of 1' do
+          expect(subject.answerOptions).to include({ 'yes' => 1 })
         end
 
-        it 'includes no' do
-          expect(subject.answer_options).to include 'no'
+        it 'includes no with a score of 0' do
+          expect(subject.answerOptions).to include({ 'no' => 0 })
         end
 
       end

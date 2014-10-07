@@ -1,27 +1,26 @@
-Area|Question|Answer Options|Notes
-User / Reviewer Experience|Is there a runner script?|yes - no|
-User / Reviewer Experience|Is there a read me and does it explain how to run the app?|yes - no|
-User / Reviewer Experience|Is there a catch all errors clause handling unexpected errors?|yes - no|
-User / Reviewer Experience|Do invalid inputs result in helpful error messages?|stacktrace - unhelpful message - helpful message|
-User / Reviewer Experience|On scale from redundant to helpful, how are the comments?|redundant - helpful|redundant - state what the code does; helpful - explain reasons behind design decisions
-OOD|Does the code follow Single Responsibility Principle?|rarely - occasionally - most times|
-OOD|Are classes & methods small?| yes - no |
-OOD|Are variable / method names descriptive?| rarely - occasionally - most times|
-OOD|Are methods easy to understand?	| rarely - occasionally - most times|
-OOD|Is the domain design helpful to describing the solution?| rarely - occasionally - most times|
-Testing|Is there a separation between Functional / Integration / Unit test levels?| yes - no|
-Testing|Are functional tests written in a high level business oriented language?| yes - no|
-Testing|Do unit tests describe behaviour of each public method?| rarely - occasionally - most times|
-Testing|Do unit tests cover exceptional cases?| rarely - occasionally - most times|
-Testing|Does test naming follow: action - context pattern?| rarely - occasionally - most times|
-Testing|Do tests follow arrange-act-assert pattern?| rarely - occasionally - most times|
-Tech, Ruby|Has a code quality checker / test coverage tool been used?|quality checker - test coverage - both|	For example Cane, or Stylecop
-Tech, Ruby|Do tests appropriately use describe and context blocks?|no - sometimes - most times|Appropriately meaning in line with betterspecs.org guidelines
-Tech, Ruby|Does the code include appropriate use of list / map operations?| rarely - occasionally - most times|
-Tech, Ruby|Is Rakefile provided with relevant tasks & descriptions?|missing - present - well structured|
-Tech, Ruby|Is Gemfile provided with relevant gem groupings|missing - present - well structured|
-Tech, Git|Are changes grouped in small cohesive commits?|yes - no|
-Tech, Git|Are commit messages meaningful, do they communicate reasons for changes?|not relevant - yes - no|
-Tech, Git|Is there a meaningul gitignore?|not relevant - yes - no|
-Tech, Linux|Is the runner written as a shell script (starting with a hashbang)?| yes - no|
-Tech, Linux|Are relevant signals trapped (SIGINT, EXIT)?|yes - no|
+Area|Question|Answer Options / Score|Notes
+User / Reviewer Experience|Is there a runner script?|no:0 - yes:1|
+User / Reviewer Experience|Is there a read me and does it explain how to run the app?|does not: 0 - poorly:0.5 - well:1|
+User / Reviewer Experience|Is there a catch all errors clause handling unexpected errors?|no:0 - yes:1|
+User / Reviewer Experience|Do invalid inputs result in helpful error messages?|stacktrace:0 - unhelpful message:0.5 - helpful message:1|
+User / Reviewer Experience|On scale from redundant to helpful, how are the comments?|redundant:0 - helpful:1|redundant - state what the code does; helpful - explain reasons behind design decisions
+OOD|Does the code follow Single Responsibility Principle?|rarely:0 - occasionally:0.5 - most times:1|
+OOD|Are classes & methods small?| no:0 - yes:1 |
+OOD|Are variable / method names descriptive?| rarely:0 - occasionally:0.5 - most times:1|
+OOD|Are methods easy to understand?	| rarely:0 - occasionally:0.5 - most times:1|
+OOD|Is the domain design helpful to describing the solution?| rarely:0 - occasionally:0.5 - most times:1|
+Testing|Is there a separation between Functional / Integration / Unit test levels?| no:0 - yes:1 |
+Testing|Do unit tests describe behaviour of each public method?| rarely:0 - occasionally:0.5 - most times:1|
+Testing|Do unit tests cover exceptional cases?| rarely:0 - occasionally:0.5 - most times:1|
+Testing|Does test naming follow: action - context pattern?| rarely:0 - occasionally:0.5 - most times:1|
+Testing|Do tests follow arrange-act-assert pattern?| rarely:0 - occasionally:0.5 - most times:1|
+Tech, Ruby|Has a code quality checker / test coverage tool been used?|neither:0 - one of the two:0.25 - both:0.5|	For example Cane, or Stylecop
+Tech, Ruby|Do tests appropriately use describe and context blocks?|no:0 - sometimes:0.25 - most times:0.5|Appropriately meaning in line with betterspecs.org guidelines
+Tech, Ruby|Does the code include appropriate use of list / map operations?| rarely:0 - occasionally:0.25 - most times:0.5|
+Tech, Ruby|Is Rakefile provided with relevant tasks & descriptions?|missing:0 - present, but messy:0.25 - well structured:0.5|
+Tech, Ruby|Is Gemfile provided with relevant gem groupings|missing:0 - present:0.5|
+Tech, Git|Are changes grouped in small cohesive commits?| no:0 - yes:0.5 |
+Tech, Git|Are commit messages meaningful, do they communicate reasons for changes?|no:0 - yes:0.5|
+Tech, Git|Is there a meaningul gitignore?| no:0 - yes:0.5 - not relevant:0.5|
+Tech, Linux|Is the runner written as a shell script (starting with a hashbang)?| no:0 - yes:0.5 |
+Tech, Linux|Are relevant signals trapped (SIGINT, EXIT)?| no:0 - yes:0.5 |
