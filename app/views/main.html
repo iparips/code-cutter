@@ -13,8 +13,12 @@
         {{answerText}}
       </input>
     </span>
-
   </div>
+
+  <h2 ng-show="resultsPerSection[section].valid()">Results:
+    <span ng-bind="resultsPerSection[section].userScore"></span> /
+    <span ng-bind="resultsPerSection[section].maxScore"></span>
+  </h2>
 
 </div>
 
