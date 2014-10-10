@@ -10,7 +10,15 @@ angular.module('ccApp.controllers')
   $scope.sections = _.keys(questionsByCategory)
 
   $scope.totalsPerSection = scores.totals(questions)
-  $scope.resultsPerSection = scores.userScores(questions)
+
+  updateResults = () ->
+    $scope.resultsPerSection = scores.userScores(questions)
+
+  $scope.$watch(
+    'questions',
+    updateResults,
+    true
+  )
 
   $scope.generateReport = () ->
-    $scope.resultsPerSection = scores.userScores(questions)
+    # TODO: add report generation
