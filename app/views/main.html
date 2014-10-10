@@ -15,9 +15,9 @@
     </span>
   </div>
 
-  <h2 ng-show="resultsPerSection[section].valid()">Results:
-    <span ng-bind="resultsPerSection[section].userScore"></span> /
-    <span ng-bind="resultsPerSection[section].maxScore"></span>
+  <h2>Results:
+    <span ng-bind="resultsPerSection[section].score"></span> /
+    <span ng-bind="totalsPerSection[section].score"></span>
   </h2>
 
 </div>
