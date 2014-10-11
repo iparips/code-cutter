@@ -25,7 +25,7 @@ angular.module('ccApp.services')
         )
         results
 
-      userScores: (questions) ->
+      userScoresPerCategory: (questions) ->
         catsAndScores = _.map(questions, (q) ->
           {
           category: q.tags[0],
@@ -36,7 +36,7 @@ angular.module('ccApp.services')
         scoresByCat = _.groupBy(catsAndScores, (q) -> q.category)
         this.score(scoresByCat)
 
-      totals: (questions) ->
+      fullScoresPerCategory: (questions) ->
         catsAndScores = _.map(questions, (q) ->
           {
             category: q.tags[0],
