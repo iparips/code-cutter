@@ -2,7 +2,7 @@ Area|Question|Answer Options / Score|Notes
 User / Reviewer Experience|Is there a runner script?|no:0 - yes:1|
 User / Reviewer Experience|Is there a read me and does it explain how to run the app?|does not: 0 - poorly:0.5 - well:1|
 User / Reviewer Experience|Is there a catch all errors clause handling unexpected errors?|no:0 - yes:1|
-User / Reviewer Experience|Do invalid inputs result in helpful error messages?|stacktrace:0 - unhelpful message:0.5 - helpful message:1|
+User / Reviewer Experience|Do invalid inputs result in helpful error messages?|stacktrace:0 - unhelpful:0.5 - helpful:1|
 User / Reviewer Experience|On scale from redundant to helpful, how are the comments?|redundant:0 - helpful:1|redundant - state what the code does; helpful - explain reasons behind design decisions
 OOD|Does the code follow Single Responsibility Principle?|rarely:0 - occasionally:0.5 - most times:1|
 OOD|Are classes & methods small?| no:0 - yes:1 |
