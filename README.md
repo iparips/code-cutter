@@ -1,18 +1,28 @@
 ## Notice
 
-Code cutter is currently work in progress. It is missing most features. Please come again later.
+Code cutter is currently work in progress.
 
 ## Intro
 
-Code Cutter is a tool to assist assessing Toy Robot implementations that come in form recruitment candidates.
+The reason I decided to create Code Cutter (CC) is to make my code reviews consistent and balanced. That way it is easier to compare the submissions from various candidates, and it ensures that the submitted code is reviewed from a number of important perspectives.
 
-It presents a user with a series of questions in four categories:
+CC presents a user with a series of questions in four categories:
 - User / Reviewer Experience
 - Object Oriented Design
 - Tesitng
 - Specific Technology (Ruby) Knowledge
 
 A report will be generated as a result of answering the quesitons which will summarise candidate's strengths and areas for improvement.
+
+## Usage Instructions
+
+Start the app with ```grunt serve```
+
+## To change questions / weightings
+
+edit ```data/questions.csv```
+run ```bundle exec rake csv:to_json```
+copy the contents of ```out/questions.json``` to the value of data variable in ```questions.coffee```
 
 ## Work Pipeline
 
