@@ -25,14 +25,13 @@ module CodeCutter
 
       def parse_answer_options(string)
         options = string.split('-').map(&:strip)
-
-        result = {}
         options.map do |o|
           option_and_score = o.split(':')
-          result[option_and_score.first] = Float(option_and_score.last)
+          {
+              text: option_and_score.first,
+              score: Float(option_and_score.last)
+          }
         end
-
-        result
       end
 
       def parse_notes(string)

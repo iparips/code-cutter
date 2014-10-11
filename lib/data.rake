@@ -30,7 +30,7 @@ namespace :csv do
   end
 
   def to_json_string(questions)
-    { questions: questions.map(&:to_h) }.to_json
+    questions.map(&:to_h).to_json
   end
 
 end

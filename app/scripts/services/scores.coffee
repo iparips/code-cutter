@@ -40,7 +40,7 @@ angular.module('ccApp.services')
         catsAndScores = _.map(questions, (q) ->
           {
             category: q.tags[0],
-            score:  _.max(_.values(q.answerOptions))
+            score:  _.max(_.map(q.answerOptions, (o) -> o.score))
           }
         )
         scoresByCat = _.groupBy(catsAndScores, (q) -> q.category)

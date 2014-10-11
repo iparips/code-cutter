@@ -1,24 +1,30 @@
-<div ng-repeat="section in sections">
+<div class="section" ng-repeat="section in sections">
 
   <h1>{{section}}</h1>
 
-  <div ng-repeat="question in questionGroups[section]">
-    <span>{{question.body}}</span>
+  <div class="qna" ng-repeat="question in questionGroups[section]">
 
-    <span ng-repeat="(answerText, answerScore) in question.answerOptions">
-      <input type="radio"
-             ng-model="question.userAnswer"
-             ng-value="answerScore"
-             name="{{question.body | toSnakeCase }}">
-        {{answerText}}
-      </input>
-    </span>
+    <div class="question">{{question.body}}</div>
+
+    <div class="answer">
+
+        <span ng-repeat="answer in question.answerOptions | orderBy:score ">
+          <input type="radio"
+                 ng-model="question.userAnswer"
+                 ng-value="answer.score"
+                 name="{{question.body | toSnakeCase }}">
+            {{answer.text}}
+          </input>
+        </span>
+
+    </div>
+
   </div>
 
-  <h2>Results:
+  <div class="results">Results:
     <span ng-bind="resultsPerSection[section].score"></span> /
     <span ng-bind="totalsPerSection[section].score"></span>
-  </h2>
+  </div>
 
 </div>
 
