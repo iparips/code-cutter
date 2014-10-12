@@ -13,6 +13,7 @@ angular.module('ccApp', [
   'ngSanitize',
   'ngTouch',
   'underscore',
+  'ngJustGage',
   'ccApp.models',
   'ccApp.filters',
   'ccApp.services',
