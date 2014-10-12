@@ -10,9 +10,11 @@ angular.module('ccApp.controllers')
   $scope.sections = _.keys(questionsByCategory)
 
   $scope.fullScoresPerCategory = scores.fullScoresPerCategory(questions)
+  $scope.fullScoresTotal = scores.fullScoresTotal(questions)
 
   updateResults = () ->
     $scope.userScoresPerCategory = scores.userScoresPerCategory(questions)
+    $scope.userScoresTotal = scores.userScoresTotal(questions)
 
   $scope.$watch(
     'questions',

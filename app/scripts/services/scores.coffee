@@ -4,47 +4,42 @@ angular.module('ccApp.services')
   .factory 'scores', (_) ->
     class Scores
 
-      score: (scoresByCat) ->
+      count: (scores) ->
+        _.reduce(
+          scores
+          (accumulator, score) ->
+            value = if score != -1 then score else 0
+            accumulator + value
+          0
+        )
+
+      scoresByCat: (scoresByCat) ->
         results = {}
         categories = _.keys(scoresByCat)
 
-        _.each(categories, (category) ->
-
-          scorer = (accumulator, scoreCategoryPair) ->
-            score = scoreCategoryPair.score
-            value = if score != -1 then score else 0
-            accumulator + value
-
-          score = _.reduce(
-              scoresByCat[category],
-              scorer,
-              0)
-
+        _.each categories, (category) =>
+          scores = _.map scoresByCat[category], (catScorePair) -> catScorePair.score
           results[category] =
-            score: score
-        )
+            score: this.count(scores)
+
         results
 
       userScoresPerCategory: (questions) ->
-        catsAndScores = _.map(questions, (q) ->
-          {
-          category: q.tags[0],
-          score:  q.userAnswer
-          }
-        )
-
+        catsAndScores = _.map questions, (q) -> q.toCatAndScore()
         scoresByCat = _.groupBy(catsAndScores, (q) -> q.category)
-        this.score(scoresByCat)
+        this.scoresByCat(scoresByCat)
 
       fullScoresPerCategory: (questions) ->
-        catsAndScores = _.map(questions, (q) ->
-          {
-            category: q.tags[0],
-            score:  _.max(_.map(q.answerOptions, (o) -> o.score))
-          }
-        )
-        scoresByCat = _.groupBy(catsAndScores, (q) -> q.category)
-        this.score(scoresByCat)
+        catsAndScores = _.map questions, (q) -> q.toCatAndFullScore()
+        scoresByCat = _.groupBy catsAndScores, (q) -> q.category
+        this.scoresByCat(scoresByCat)
 
+      userScoresTotal: (questions) ->
+        answers = _.map questions, (q) -> q.userAnswer
+        this.count(answers)
+
+      fullScoresTotal: (questions) ->
+        scores = _.map questions, (q) -> q.fullScore()
+        this.count(scores)
 
     new Scores()
