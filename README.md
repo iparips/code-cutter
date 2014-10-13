@@ -14,11 +14,20 @@ CC presents a user with a series of questions in four categories:
 
 A report will be generated as a result of answering the quesitons which will summarise candidate's strengths and areas for improvement.
 
+## Usage pre-requisites
+
+Install node, checkout project, install node packages, and install bower components
+
+```
+brew install node
+git checkout https://git.realestate.com.au/iparipsa/code-cutter
+cd code-cutter
+npm install
+bower install
+```
+
 ## Usage Instructions
 
-Install node: ```brew install node```
-Install node packages: ```npm install```
-Install bower packages: ```bower install```
 Start the app with: ```grunt serve```
 
 ## To change questions / weightings
