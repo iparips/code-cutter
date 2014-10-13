@@ -16,7 +16,10 @@ A report will be generated as a result of answering the quesitons which will sum
 
 ## Usage Instructions
 
-Start the app with ```grunt serve```
+Install node: ```brew install node```
+Install node packages: ```npm install```
+Install bower packages: ```bower install```
+Start the app with: ```grunt serve```
 
 ## To change questions / weightings
 
