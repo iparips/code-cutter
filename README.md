@@ -16,7 +16,7 @@ Install node, checkout project, install node packages, and install bower compone
 
 ```
 brew install node
-git checkout https://git.realestate.com.au/iparipsa/code-cutter
+git clone git@github.com:iparips/code-cutter.git
 cd code-cutter
 npm install
 bower install
