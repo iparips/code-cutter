@@ -1,7 +1,3 @@
-## Notice
-
-Code cutter is currently work in progress.
-
 ## Intro
 
 The reason I decided to create Code Cutter (CC) is to make my code reviews consistent and balanced. That way it is easier to compare the submissions from various candidates, and it ensures that the submitted code is reviewed from a number of important perspectives.
@@ -40,7 +36,7 @@ copy the contents of ```out/questions.json``` to the value of data variable in `
 
 It appears that ng-justgage has an issue with the way versions are managed. If the gage is not working, copy and paste the latest code from https://github.com/mattlaver/angular-justgage/blob/master/ng-justgage.js to bower_components/angular-justgage/ng-justgage.js
 
-## Work Pipeline
+## Extension Ideas
 
 - Report generation
 -- Display total for each section as a fraction of max score
