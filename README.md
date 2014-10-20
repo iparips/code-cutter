@@ -51,3 +51,7 @@ It appears that ng-justgage has an issue with the way versions are managed. If t
 -- make the form look good
 
 - Add a slider to each section allowing the user to adjust the score as they see fit
+
+## License (MIT)
+
+The project is licensed under the MIT license. Please refer to LICENSE.md for details.
