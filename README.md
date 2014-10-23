@@ -5,7 +5,7 @@ The reason I decided to create Code Cutter (CC) is to make my code reviews consi
 CC presents a user with a series of questions in four categories:
 - User / Reviewer Experience
 - Object Oriented Design
-- Tesitng
+- Testing
 - Specific Technology (Ruby) Knowledge
 
 A report will be generated as a result of answering the quesitons which will summarise candidate's strengths and areas for improvement.
